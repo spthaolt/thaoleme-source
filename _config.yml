@@ -78,7 +78,9 @@ theme: icarus
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: git@github.com:spthaolt/spthaolt.github.io.git
   branch: master
   message: "{{ now('YYYY-MM-DD HH:mm:ss') }}"
+- type: shell
+  command: surge public
